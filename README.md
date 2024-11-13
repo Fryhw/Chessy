@@ -6,7 +6,7 @@ It will allow you to get the app
 
 ## Contribution
 mail : noe.mention.etu@univ-lemans.fr
-\n
+
 mail : mateo.rullier.etu@univ-lemans.fr
 
 ## Licence
