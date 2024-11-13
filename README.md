@@ -1,4 +1,4 @@
-# Deluge Simulator
+# Chessy
 Chessy is an app destined to help play chess by using your voice
 ## Installation
 Use the commande : ``` git clone ```
