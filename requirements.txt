@@ -1,4 +1,5 @@
 ipython
+python-chess
 jupyterlab
 loguru
 matplotlib
