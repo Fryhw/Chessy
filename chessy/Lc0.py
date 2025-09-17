@@ -42,6 +42,17 @@ class LC0Engine:
             if line.startswith("bestmove"):
                 return line.split()[1]
 
+    def get_leila(self, fen: str, movetime=1000):
+        self.send_command(f"position fen {fen}")
+        self.send_command(f"go movetime {movetime}")
+        outputs = []
+        while True:
+            line = self.queue.get()
+            outputs.append(line)
+            if line.startswith("bestmove"):
+                break
+        return outputs
+
     def quit(self):
         self.send_command("quit")
         self.process.terminate()
