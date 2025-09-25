@@ -1,16 +1,16 @@
-import pyttsx3
+import speech_recognition as sr
 
-def sr(engine = None):
-    if engine == None:
-        engine = pyttsx3.init()
-    engine.setProperty('rate', 150) 
-    engine.setProperty('volume', 0.9)
+def sr(sr = None):
+    if sr == None:
+        sr.Recognizer()
 
-    voices = engine.getProperty('voices')
-    for voice in voices:
-        if "french" in voice.languages or "FR" in voice.id:
-            engine.setProperty('voice', voice.id)
-            break
+with sr.Microphone() as source:
+    print("Talk")
+    audio_text = sr.listen(source)
+    print("Time over, thanks")
 
-    engine.say("E")
-    engine.runAndWait()
+    try:
+        print("Text: "+sr.recognize_google(audio_text,language="fr-FR"))
+    except:
+         print("Sorry, I did not get that")
+
