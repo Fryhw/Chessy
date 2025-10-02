@@ -56,3 +56,7 @@ class LC0Engine:
     def quit(self):
         self.send_command("quit")
         self.process.terminate()
+
+
+def other():
+    return None
