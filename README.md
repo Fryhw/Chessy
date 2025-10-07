@@ -8,7 +8,12 @@ Notebooks -> Try each elements use in the project and the overall function
 
 Chessy -> Internal file of the project
 
+-> 
+
+->
+
 ## Contribution
+
 mail : noe.mention.etu@univ-lemans.fr
 
 mail : mateo.rullier.etu@univ-lemans.fr
