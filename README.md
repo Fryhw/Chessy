@@ -10,7 +10,7 @@ Notebooks -> Try each elements use in the project and the overall function
 
 Chessy -> Internal file of the project
 
--> 
+Models -> 
 
 ->
 
