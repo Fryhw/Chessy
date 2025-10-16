@@ -5,7 +5,7 @@ def sr(sr = None, language = None):
         sr.Recognizer()
 
 with sr.Microphone() as source:
-    print("Talk")
+    print("Talk : ")
     audio_text = sr.listen(source)
     print("Time over, thanks")
 
