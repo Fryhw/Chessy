@@ -3,6 +3,7 @@ import threading
 import queue
 
 class LC0Engine:
+    
     def __init__(self, lc0_path: str):
         self.process = subprocess.Popen(
             [lc0_path],
