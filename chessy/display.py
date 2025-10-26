@@ -1,9 +1,7 @@
 from pathlib import Path
-
 from loguru import logger
 from tqdm import tqdm
 import typer
-
 from chessy.config import FIGURES_DIR, PROCESSED_DATA_DIR
 
 app = typer.Typer()
