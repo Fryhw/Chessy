@@ -10,6 +10,7 @@ app = typer.Typer()
 
 
 @app.command()
+
 def main(
     input_path: Path = PROCESSED_DATA_DIR / "dataset.csv",
     output_path: Path = FIGURES_DIR / "plot.png",
