@@ -7,6 +7,7 @@ from dotenv import load_dotenv
 from loguru import logger
 
 # Load environment variables from .env file if it exists
+
 load_dotenv()
 
 # Paths
