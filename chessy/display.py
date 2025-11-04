@@ -1,28 +1,9 @@
 from pathlib import Path
-from loguru import logger
-from tqdm import tqdm
-import typer
 from chessy.config import FIGURES_DIR, PROCESSED_DATA_DIR
+import chess 
 
-app = typer.Typer()
-
-# Display function of chess game / info
-
-
-@app.command()
-
-def main(
-    input_path: Path = PROCESSED_DATA_DIR / "dataset.csv",
-    output_path: Path = FIGURES_DIR / "plot.png",
-    # -----------------------------------------
-):
-    logger.info("Generating plot from data...")
-    for i in tqdm(range(10), total=10):
-        if i == 5:
-            logger.info("Something happened for iteration 5.")
-    logger.success("Plot generation complete.")
-    # -----------------------------------------
-
-
-if __name__ == "__main__":
-    app()
+def show_board(fen): ## ADD VOICE OVER !
+    if fen != None :
+        print(chess.Board(fen))
+    else: 
+         print(chess.Board())
