@@ -3,6 +3,7 @@ Chessy is an app destined to help play chess by using your voice
 ## Installation
 
 Use the commande : ``` git clone ```
+
 It will allow you to get the app
 
 Notebooks -> Try each elements use in the project and the overall function
