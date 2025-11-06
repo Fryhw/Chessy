@@ -1,9 +1,9 @@
 from pathlib import Path
-from chessy.config import FIGURES_DIR, PROCESSED_DATA_DIR
+# from chessy.config import FIGURES_DIR, PROCESSED_DATA_DIR
 import chess 
 import os
 
-def show_board_fen(fen): ## ADD VOICE OVER !
+def return_board_fen(fen = None): ## ADD VOICE OVER !
     if fen != None :
         print(chess.Board(fen))
     else: 
@@ -18,21 +18,22 @@ def show_board(board): ## ADD VOICE OVER !
 
 #take in fen + move => return board updated and error otherwise
     
-def play_move(fen, move): ## ADD VOICE OVER ! 
+def play_move(board, move):
     if move is None:
         return "missing move"
-    if fen is not None:
-        board = chess.Board(fen)
-    else:
+    if board is None:
         board = chess.Board()
-        
-    move_obj = chess.Move.from_uci(move)
-    if move not in board.legal_moves:
-        return f"Illegal move: {move}"
+    
+    try:
+        move_obj = chess.Move.from_uci(move)
+    except ValueError:
+        return f"Coup invalide : {move}"
+    
+    if move_obj not in board.legal_moves:
+        return f"Coup illégal : {move}"
 
     board.push(move_obj)
     return board
-
 
 def save_board_fen(board, name):
     if board is not None and name:
