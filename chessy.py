@@ -2,6 +2,7 @@ import chess
 from chessy import board as board_module  # ton module chessy/board.py
 
 def main():
+    
     print("♟️ Bienvenue dans Chessy — Jeu d’échecs vocal avec IA ♟️")
 
     # --- Création ou chargement de la partie ---
