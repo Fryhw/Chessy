@@ -1,4 +1,5 @@
 # Chessy 2025
+
 Chessy is an app destined to help play chess by using your voice
 ## Installation
 
