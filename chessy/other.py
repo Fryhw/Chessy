@@ -7,3 +7,6 @@ def rating(player):
         return 'No rating'
     else :
         return '100'
+
+
+    #=>
